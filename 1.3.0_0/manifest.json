@@ -1,0 +1,46 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "icons/disabled128.png",
+         "16": "icons/disabled16.png",
+         "300": "icons/disabled300.png",
+         "48": "icons/disabled48.png"
+      },
+      "default_popup": "html/popup.html",
+      "default_title": "__MSG_extName__"
+   },
+   "author": "Safum Free VPN",
+   "background": {
+      "service_worker": "js/background.js"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "css/content.css" ],
+      "js": [ "js/content.js" ],
+      "match_about_blank": true,
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_extShortDesc__",
+   "host_permissions": [ "\u003Call_urls>" ],
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "300": "icons/icon300.png",
+      "48": "icons/icon48.png"
+   },
+   "incognito": "split",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAufij5Ge2nRyMBaK6hWY8MmNaimTobTkDb64YWSAFWM7X3v36VshlEPUwIxPagvZP21VFV7CggznuN1AJ1qhTjL4ATTZDeUA26Xm5eJGSUmpIiR/lKVPysnXnvPqrzkmQ0eJFW0AUz8MxpO00TtEQNpTfCuUuYBDnNNOlz4NSQ/A97pPj3RAflPvvbSOzuHN+9K+rsvur6K4POndTtxSHY0dzs4GiGr+jVibTmwIeGRchmxilG0MQrYA+0ByMsaLgd6UM8UtgZFvg0BfBwGO65HTIk9sleUWG5IHrB3wD0B75y8A2mvZzIXemNSZsTxh9mNtfbXR2dWhy1o5iovexVQIDAQAB",
+   "manifest_version": 3,
+   "minimum_chrome_version": "88.0",
+   "name": "__MSG_extName__",
+   "permissions": [ "proxy", "storage", "scripting", "declarativeNetRequest", "alarms" ],
+   "short_name": "free vpn",
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "1.3.0",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "/web_accessible_resources/*" ]
+   } ]
+}
